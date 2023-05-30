@@ -22,4 +22,4 @@ def count_terminal_conditions(model):
         conv_or_layer_weights = model[3].weight()
         # count = torch.matmul(conv_or_layer_weights.permute(1,0), count.repeat(conv_or_layer_weights.shape[0], 1))
         count = conv_or_layer_weights.sum()*count
-    return count.item()
+    return count
